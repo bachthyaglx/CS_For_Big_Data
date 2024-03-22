@@ -1,0 +1,3 @@
+With a rising length of the input list, how does the number of possible
+solutuions rise that must be tested?
+- 

@@ -1,0 +1,2 @@
+With a rising length of the input list, how does the number of permutations grow?
+- n! (fractorial of n)

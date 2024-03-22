@@ -1,0 +1,22 @@
+How many time is the "first element" stored?
+- 11 times
+
+How much memory is used for applying the function to a list of n numbers?
+- Each recursive call creates its own stack frame
+- Stack frame can not exceed the maximum recursion depth allowed in Python
+
+import sys
+print(sys.getrecursionlimit())
+
+- The default recursion limit in Python is typically set to 1000
+- A recursive function can make up to 1000 nested calls before reaching the recursion limit
+
+What is the run-time estimate for sum() given a list of n numbers?
+
+- The function will make n recursive calls, performing a constant amount of work in each call.
+- O(n), a linear time complexity where the number of operations grows linearly with the size of the input (n)
+
+How many stack-frames are used for a list of n numbers?
+- The number of elements in the list (11 stack-frames) 
+
+(2 Pts)

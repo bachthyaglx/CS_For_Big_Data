@@ -1,0 +1,2 @@
+With a rising length of the input list, how does the size of the Powerset grow?
+- n**2 (powerset)

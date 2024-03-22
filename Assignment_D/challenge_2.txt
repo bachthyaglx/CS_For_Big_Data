@@ -1,0 +1,10 @@
+Explain the concept of a generator in Python.
+- Unlike return and exit
+- Generator generates a sequence of values incrementally and can be paused and resumed
+- When call a generator, a generator object is created to iterate through the values it produces.
+
+Why can't fib(60) or fib(90) be computed recursively?
+- Huge amount of memory and time consumption due to recursive
+
+What is the more limiting constraint: memory use or needed run time?
+- Memory use

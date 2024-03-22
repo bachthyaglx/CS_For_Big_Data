@@ -1,0 +1,16 @@
+With a rising length of the input list, how many steps are needed to
+complete each function in the best and worst case and on average?
+- Find(): 
+	+ Best case: If the first element in _numbers, the match_func immediately return True, 
+			hence, only one step is needed, time complexity is O(1).
+	+ Worst case: if the match_func evaluate to False for all elements in _numbers, hence
+			the time complexity will be O(n), where n is the length of the _numbers list.
+
+- find_adjacent():
+	+ Best case: If the target pair is at the beginning of the _numbers list. The function will quickly find the 					adjacent pair and return. The number of steps needed in the best case is O(1)
+	+ Worst case: If the target pair is not present in the list, the function will iterate through the entire 					_numbers list. The number of steps needed in the worst case is O(n)
+
+- find_pairs():
+	+ Best Case: When the first two elements in the list form a pair that adds up to n. Hence, it will iterate through the entire 			list at ONCE time, time complexity of O(n).
+	
+	+ Worst Case: The worst case occurs when NO pair in the list adds up to n. The function will iterate through the entire list  			to search for the complement in the set. Hence, time complexity is O(n).

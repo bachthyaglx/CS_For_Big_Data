@@ -1,0 +1,35 @@
+Inspect files and figure out their purpose. Write 1-2 sentenses what each file means
+and purpose is:
+
+__init __.py
+: _____________________________________
+
+- Contain directory as a Python package (python modules)
+- The file is executed once when any .py file from the directory is imported for the first time
+
+
+expressions.py
+: __________________________________
+- Constructor to initialize member variables.
+- Program is run when this file is directly executed
+
+test_expressions.py
+: ______________________________
+- tested objects of the Expressions class
+
+Read "A Beginner’s Guide to Unit Tests in Python",
+https://www.dataquest.io/blog/unit-tests-python/
+and answer questions:
+
+
+How are tests discovered? Which feature makes the test runner to collect
+something as a test?
+
+- single function or method, that we use to test other pieces of code (unittest and PyTest)
+
+What is an assert statement? What happens when a test (assert) passes and fails?
+- Assert is a given condition statement to test the result. 
+- If the condition is TRUE, nothing happens, but if it's FALSE, an error is raised.
+
+Where is the test runner started in given files?
+- Start when unittest.main() is executed at the end of test file. 

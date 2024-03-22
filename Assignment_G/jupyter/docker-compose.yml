@@ -1,0 +1,43 @@
+version:  '3'
+#
+# adopted from:
+# https://github.com/dsmits/jupyter-docker-compose/blob/main/docker-compose.yml
+# using jupyter/minimal-notebook image 1.47 GB
+#
+# must enable: Docker Desktop -> Settings -> Resources -> File Sharing
+# path: C:/Sven1/svgr/workspaces/cs4bigdata/B_setup_docker/jupyter
+#
+# last started with:
+# http://localhost:8888/lab?token=cbc1aa82b9144579334507e07607d4c83d8dfa9e11473df8
+# 
+
+
+services:
+  jupyter:
+    image: jupyter/minimal-notebook
+    volumes:
+      - .:/home/jovyan/work
+      - ./configure_environment.sh:/usr/local/bin/before-notebook.d/configure_environment.sh
+    ports:
+      - 8888:8888
+
+#
+# alternative:
+# https://github.com/stefanproell/jupyter-notebook-docker-compose
+# using jupyter/datascience-notebook image 4.56 GB
+#
+# services:
+#   datascience-notebook:
+#       # image:    jupyter/datascience-notebook
+#       image:    jupyter/minimal-notebook
+#       volumes:
+#         - ${LOCAL_WORKING_DIR}:/home/jovyan/work
+#         - ${LOCAL_DATASETS}:/home/jovyan/work/datasets
+#         - ${LOCAL_MODULES}:/home/jovyan/work/modules
+#         - ${LOCAL_SSL_CERTS}:/etc/ssl/notebook
+#       ports:
+#         - ${PORT}:8888
+#       container_name:   jupyter_notebook
+#       command: "start-notebook.sh \
+#         --NotebookApp.password=${ACCESS_TOKEN} \
+#         --NotebookApp.certfile=/etc/ssl/notebook/jupyter.pem"
